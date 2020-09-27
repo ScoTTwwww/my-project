@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nrwl:latest
+    container_name: my_project_app
+    command: npm run start:web
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+    ports:
+      - 4400:4400
+    volumes:
+      - .:/opt/app
+
+networks:
+  default:
+    name: nrwl_network

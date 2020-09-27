@@ -28,6 +28,13 @@
     "web-e2e": {
       "tags": [],
       "implicitDependencies": ["web"]
+    },
+    "mobile": {
+      "tags": []
+    },
+    "mobile-e2e": {
+      "tags": [],
+      "implicitDependencies": ["mobile"]
     }
   }
 }
